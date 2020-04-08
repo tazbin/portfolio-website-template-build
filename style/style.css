@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #262626;
+}
+
+body .bg {
+  -webkit-clip-path: polygon(9% 0, 100% 0, 100% 100%, 43% 100%);
+          clip-path: polygon(9% 0, 100% 0, 100% 100%, 43% 100%);
+  background-color: #E42024;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  z-index: -3;
+}
+
+@media (max-width: 800px) {
+  body .bg {
+    -webkit-clip-path: polygon(100% 0, 100% 73%, 58% 100%, 0 100%, 0 0);
+            clip-path: polygon(100% 0, 100% 73%, 58% 100%, 0 100%, 0 0);
+  }
+}
+
+body .bg-2 {
+  -webkit-clip-path: polygon(9% 0, 100% 0, 100% 100%, 50% 100%);
+          clip-path: polygon(9% 0, 100% 0, 100% 100%, 50% 100%);
+  background-color: #e5292d;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+@media (max-width: 800px) {
+  body .bg-2 {
+    -webkit-clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 100%, 0 0);
+            clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 100%, 0 0);
+  }
+}
+
+body .header {
+  text-align: right;
+  padding: 30px 60px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  body .header {
+    text-align: center;
+    letter-spacing: 8px;
+  }
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  padding: 15px 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 800px) {
+  body .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+  }
+}
+
+body .main .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #333333;
+  border-radius: 15px;
+  max-width: 650px;
+  border: 1px solid #E42024;
+}
+
+@media (max-width: 800px) {
+  body .main .card {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 20px;
+  }
+}
+
+body .main .card ul {
+  list-style-type: none;
+  padding: 30px;
+}
+
+body .main .card ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+body .main .card ul li span {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 100%;
+}
+
+@media (max-width: 800px) {
+  body .main .card ul li span {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+body .main .card ul li strong {
+  margin-left: 10px;
+  font-size: 1.2em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .main .card ul li strong:hover {
+  font-size: 1.25em;
+}
+
+@media (max-width: 800px) {
+  body .main .card ul li strong {
+    font-size: 1em;
+  }
+  body .main .card ul li strong:hover {
+    font-size: 1.03em;
+  }
+}
+
+body .main .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+body .main .text h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+@media (max-width: 800px) {
+  body .main .text h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+}
+
+body .main .text p {
+  font-size: 1.5em;
+  margin: 20px auto 20px auto;
+  text-transform: capitalize;
+}
+
+@media (max-width: 800px) {
+  body .main .text p {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+body .main .text a {
+  background-color: #333333;
+  padding: 15px;
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 10px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+body .main .text a:hover {
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+  color: #333333;
+}
+
+@media (max-width: 800px) {
+  body .main .text a {
+    margin: auto;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

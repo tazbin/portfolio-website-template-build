@@ -1,0 +1,162 @@
+// variables
+$red: #E42024;
+$light-red: lighten(#E42024, 2%);
+$light-ash: #333333;
+$dark-ash: #262626;
+$padding: 15px;
+$mobile: 800px;
+// variables
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: sans-serif;
+    color: white;
+}
+
+body {
+    background-color: $dark-ash;
+    .bg {
+        clip-path: polygon(9% 0, 100% 0, 100% 100%, 43% 100%);
+        background-color: $red;
+        height: 600px;
+        width: 100%;
+        position: absolute;
+        z-index: -3;
+        @include mobile {
+            clip-path: polygon(100% 0, 100% 73%, 58% 100%, 0 100%, 0 0);
+        }
+    }
+    .bg-2 {
+        clip-path: polygon(9% 0, 100% 0, 100% 100%, 50% 100%);
+        background-color: $light-red;
+        height: 600px;
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+        @include mobile {
+            clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 100%, 0 0);
+        }
+    }
+}
+
+body {
+    .header {
+        text-align: right;
+        padding: $padding*2 $padding*4;
+        text-transform: uppercase;
+        @include mobile {
+            text-align: center;
+            letter-spacing: 8px;
+        }
+    }
+    .main {
+        display: flex;
+        margin-top: 50px;
+        padding: $padding $padding*4;
+        align-items: center;
+        @include mobile {
+            flex-direction: column;
+            margin-top: 0px;
+        }
+        .card {
+            flex: 1;
+            background-color: $light-ash;
+            border-radius: 15px;
+            max-width: 650px;
+            border: 1px solid $red;
+            @include mobile {
+                order: 1;
+                margin-top: 20px;
+            }
+            ul {
+                list-style-type: none;
+                padding: 30px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px;
+                    span {
+                        height: 30px;
+                        width: 30px;
+                        background-color: white;
+                        // position: absolute;
+                        border-radius: 100%;
+                        @include mobile {
+                            height: 15px;
+                            width: 15px;
+                        }
+                    }
+                    strong {
+                        margin-left: 10px;
+                        font-size: 1.2em;
+                        transition: 0.3s;
+                        &:hover {
+                            font-size: 1.25em;
+                        }
+                        @include mobile {
+                            font-size: 1em;
+                            &:hover {
+                                font-size: 1.03em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .text {
+            flex: 1;
+            text-align: right;
+            h1 {
+                font-size: 4em;
+                text-transform: uppercase;
+                line-height: 1em;
+                @include mobile {
+                    font-size: 3em;
+                    text-align: center;
+                }
+            }
+            p {
+                font-size: 1.5em;
+                margin: 20px auto 20px auto;
+                text-transform: capitalize;
+                @include mobile {
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
+            a {
+                background-color: $light-ash;
+                padding: $padding;
+                display: block;
+                max-width: 200px;
+                margin-left: auto;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                text-transform: capitalize;
+                border-radius: 10px;
+                transition: 0.2s ease-in;
+                &:hover {
+                    background-color: white;
+                    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+                    color: $light-ash;
+                }
+                @include mobile {
+                    margin: auto;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
